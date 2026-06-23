@@ -53,4 +53,6 @@ public abstract class Problema1_Personaje {
     public int getVida() {
         return vida;
     }
+
+    protected abstract void recibirDanoDirecto(int i);
 }
