@@ -2,7 +2,7 @@ package problema1_juegoderoles;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+// CORRECCIONES
 public class Problema1_JuegodeRoles {
 
     public static void main(String[] args) {
