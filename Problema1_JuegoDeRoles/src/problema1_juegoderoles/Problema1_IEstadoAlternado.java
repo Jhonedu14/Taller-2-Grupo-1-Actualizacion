@@ -8,6 +8,7 @@ package problema1_juegoderoles;
  *
  * @author LOQ
  */
-public class Problema1_IEstadoAlternado {
-    
+public interface Problema1_IEstadoAlternado {
+    void aplicarEfecto(Problema1_Personaje p);
+    boolean haTerminado();
 }
