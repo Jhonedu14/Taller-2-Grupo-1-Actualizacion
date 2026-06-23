@@ -27,6 +27,10 @@ public abstract class Problema1_Personaje {
     public void equiparArma(Problema1_Arma arma) { this.arma = arma; }
     public void equiparArmadura(Problema1_Armadura armadura) { this.armadura = armadura; }
 
+    public int getModificadorObjeto() {
+        return arma != null ? arma.getModificador() : 0;
+    }
+
     public void agregarEstado(Problema1_IEstadoAlterado estado) { estados.add(estado); }
     public void procesarEstados() {
         estados.removeIf(Problema1_IEstadoAlterado::haTerminado);
@@ -34,7 +38,9 @@ public abstract class Problema1_Personaje {
     }
     public void recibirDanoDirecto(int dano) { this.vida -= dano; }
 
-    public abstract void usarHabilidadEspecial(Problema1_Personaje enemigo);
+    public void usarHabilidadEspecial(Problema1_Personaje enemigo) {
+        System.out.println("X " + nombre + " no tiene habilidad especial disponible.");
+    }
     public void procesarTurno() { 
         if(cooldown > 0) cooldown--; 
         energia += 10;

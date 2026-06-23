@@ -39,9 +39,15 @@ public class Problema1_JuegodeRoles {
             }
 
             switch (tipo) {
-                case 1 -> personajes.add(new Problema1_Guerrero(nombre));
-                case 2 -> personajes.add(new Problema1_Mago(nombre)); 
-                case 3 -> personajes.add(new Problema1_Arquero(nombre)); 
+                case 1:
+                    personajes.add(new Problema1_Guerrero(nombre));
+                    break;
+                case 2:
+                    personajes.add(new Problema1_Mago(nombre));
+                    break;
+                case 3:
+                    personajes.add(new Problema1_Arquero(nombre));
+                    break;
             }
 
             System.out.println("Personaje " + nombre + " creado exitosamente.");

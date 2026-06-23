@@ -5,8 +5,8 @@ public class Problema1_Guerrero extends Problema1_Personaje {
     @Override
     public void atacar(Problema1_Personaje enemigo) {
         procesarEstados();
-        int dano = 30 + (arma != null ? arma.getBonoDano() : 0);
-        System.out.println("+️ " + nombre + " ataca con su espada a " + enemigo.getNombre());
+        int dano = 30 + (arma != null ? arma.getModificador() : 0);
+        System.out.println("+ " + nombre + " ataca con su espada a " + enemigo.getNombre());
         enemigo.defender(dano);
         subirNivel();
         procesarTurno();
@@ -14,7 +14,7 @@ public class Problema1_Guerrero extends Problema1_Personaje {
 
     @Override
     public void defender(int dano) {
-        int defensa = 10 + (armadura != null ? armadura.getBonoDefensa() : 0);
+        int defensa = 10 + (armadura != null ? armadura.getModificador() : 0);
         int danoReducido = dano - defensa;
         if (danoReducido < 0) danoReducido = 0;
         vida -= danoReducido;
