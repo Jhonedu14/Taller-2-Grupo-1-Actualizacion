@@ -1,5 +1,5 @@
 package problema1_juegoderoles;
-public class Problema1_EstadoEnvenenado implements Problema1_IEstadoAlternado {
+public class Problema1_EstadoEnvenenado implements Problema1_IEstadoAlterado {
     private int turnos = 3;
     @Override
     public void aplicarEfecto(Problema1_Personaje p) {
